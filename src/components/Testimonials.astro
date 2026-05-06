@@ -1,0 +1,137 @@
+<!-- Testimonials section — white background -->
+<section id="testimonials" class="bg-white py-24 px-6">
+  <div class="max-w-6xl mx-auto">
+    <!-- Header -->
+    <div class="text-center mb-14">
+      <p class="text-xs font-semibold tracking-label uppercase text-brand mb-3">
+        Real Couples
+      </p>
+      <h2
+        class="font-display text-3xl sm:text-4xl text-ink leading-[1.2] tracking-[-0.02em]"
+      >
+        Still together.<br />
+        <span class="text-ink/40">Better than ever.</span>
+      </h2>
+    </div>
+
+    <!-- Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Testimonial 1 -->
+      <div class="testimonial-card">
+        <!-- Stars -->
+        <div class="flex gap-1 mb-4">
+          {Array(5).fill(null).map(() => (
+            <svg viewBox="0 0 24 24" fill="#E8547A" class="w-4 h-4">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+          ))}
+        </div>
+        <!-- Quote -->
+        <blockquote class="text-ink/75 text-sm leading-relaxed flex-1">
+          "We've tried every couple app out there. Nothing stuck until Still Us.
+          The mood sharing sounds simple, but it's genuinely changed how we
+          communicate — I check it every morning before anything else."
+        </blockquote>
+        <!-- Author -->
+        <div class="flex items-center gap-3 mt-6 pt-6 border-t border-edge">
+          <div
+            class="w-9 h-9 rounded-full flex-shrink-0 bg-gradient-to-br from-brand to-brand-dark flex items-center justify-center text-white text-xs font-bold"
+          >
+            E
+          </div>
+          <div>
+            <p class="text-sm font-semibold text-ink">Emma R.</p>
+            <p class="text-xs text-ink/40">Together 2 years</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 (slightly elevated) -->
+      <div class="testimonial-card md:-translate-y-3 ring-2 ring-brand/15">
+        <!-- Badge -->
+        <div
+          class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-faint text-brand text-xs font-semibold mb-3"
+        >
+          <svg viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+          Featured Story
+        </div>
+        <!-- Stars -->
+        <div class="flex gap-1 mb-4">
+          {Array(5).fill(null).map(() => (
+            <svg viewBox="0 0 24 24" fill="#E8547A" class="w-4 h-4">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+          ))}
+        </div>
+        <!-- Quote -->
+        <blockquote class="text-ink/75 text-sm leading-relaxed flex-1">
+          "The time-delayed messages are incredible. I wrote one the night before
+          her big job presentation and set it to arrive that morning. She said it
+          was the thing that got her through it. How do you put a price on that?"
+        </blockquote>
+        <!-- Author -->
+        <div class="flex items-center gap-3 mt-6 pt-6 border-t border-edge">
+          <div
+            class="w-9 h-9 rounded-full flex-shrink-0 bg-gradient-to-br from-accent to-accent-dark flex items-center justify-center text-white text-xs font-bold"
+          >
+            M
+          </div>
+          <div>
+            <p class="text-sm font-semibold text-ink">Marcus L.</p>
+            <p class="text-xs text-ink/40">Together 3 years</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="testimonial-card">
+        <!-- Stars -->
+        <div class="flex gap-1 mb-4">
+          {Array(5).fill(null).map(() => (
+            <svg viewBox="0 0 24 24" fill="#E8547A" class="w-4 h-4">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+          ))}
+        </div>
+        <!-- Quote -->
+        <blockquote class="text-ink/75 text-sm leading-relaxed flex-1">
+          "Our shared task list has basically eliminated the 'I thought you were
+          doing it' argument. That alone was worth it. The calendar sync on top of
+          that? We're finally on the same page for the first time in our
+          relationship."
+        </blockquote>
+        <!-- Author -->
+        <div class="flex items-center gap-3 mt-6 pt-6 border-t border-edge">
+          <div
+            class="w-9 h-9 rounded-full flex-shrink-0 bg-gradient-to-br from-rose-400 to-brand flex items-center justify-center text-white text-xs font-bold"
+          >
+            P
+          </div>
+          <div>
+            <p class="text-sm font-semibold text-ink">Priya & Tom</p>
+            <p class="text-xs text-ink/40">Together 18 months</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .testimonial-card {
+    background: white;
+    border: 1px solid #E5E7EB;
+    border-radius: 20px;
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+  }
+
+  .testimonial-card:hover {
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.09);
+    transform: translateY(-2px);
+  }
+</style>

@@ -1,0 +1,255 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Privacy Policy — Still Us" description="Learn how Still Us handles your personal data and protects your privacy.">
+  <Navbar />
+  <main class="pt-24 pb-0">
+    <!-- Header -->
+    <div class="bg-canvas-deeper py-16 px-6">
+      <div class="max-w-2xl mx-auto text-center">
+        <p class="text-xs font-semibold tracking-label uppercase text-brand mb-3">Legal</p>
+        <h1 class="font-display text-4xl text-white mb-4 tracking-[-0.02em]">Privacy Policy</h1>
+        <p class="text-white/45 text-sm">Last updated: January 1, 2026</p>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="bg-canvas py-16 px-6">
+      <div class="max-w-2xl mx-auto prose-legal">
+
+        <section>
+          <h2>1. Who We Are</h2>
+          <p>
+            Still Us ("we", "us", "our") is a private mobile application designed exclusively
+            for couples. We are committed to protecting your privacy and handling your data
+            with the care it deserves. This Privacy Policy explains what information we collect,
+            how we use it, and your rights regarding it.
+          </p>
+        </section>
+
+        <section>
+          <h2>2. Information We Collect</h2>
+
+          <h3>Account Information</h3>
+          <p>When you register, we collect:</p>
+          <ul>
+            <li>Email address</li>
+            <li>Display name</li>
+            <li>Profile photo (optional)</li>
+            <li>Password (stored as a secure hash — never in plain text)</li>
+          </ul>
+
+          <h3>App Content You Create</h3>
+          <p>To provide the app's features, we store the content you create, including:</p>
+          <ul>
+            <li>Tasks and their details</li>
+            <li>Calendar events</li>
+            <li>Mood updates</li>
+            <li>Messages (including time-delayed, time-locked, and password-locked messages)</li>
+          </ul>
+          <p>
+            Your messages are stored securely in Firebase Firestore. Password-locked message
+            bodies are never transmitted to other clients — verification happens server-side
+            via Firebase Cloud Functions.
+          </p>
+
+          <h3>Device Information</h3>
+          <p>
+            We collect your device's push notification token (FCM token) solely to deliver
+            notifications to you. Tokens are refreshed on every app launch.
+          </p>
+
+          <h3>Usage Data</h3>
+          <p>
+            We do not use third-party analytics SDKs. We may collect aggregate, anonymised
+            usage statistics through Firebase to monitor app stability.
+          </p>
+        </section>
+
+        <section>
+          <h2>3. How We Use Your Information</h2>
+          <p>We use your information only to:</p>
+          <ul>
+            <li>Provide and maintain the Still Us service</li>
+            <li>Connect you with your linked partner</li>
+            <li>Deliver messages at the scheduled time or after password verification</li>
+            <li>Send push notifications you have opted in to receive</li>
+            <li>Diagnose and fix technical issues</li>
+          </ul>
+          <p>
+            We do not sell your data. We do not use your data for advertising. We do not
+            share your data with third parties except as described in Section 5.
+          </p>
+        </section>
+
+        <section>
+          <h2>4. Data Shared Between Partners</h2>
+          <p>
+            By design, some data is visible to your linked partner within the app:
+          </p>
+          <ul>
+            <li>Your current mood and display name</li>
+            <li>Tasks you create or are assigned to</li>
+            <li>Calendar events in your shared couple space</li>
+            <li>Messages you send to your partner</li>
+          </ul>
+          <p>
+            Before a couple link is established, no data is shared between users.
+          </p>
+        </section>
+
+        <section>
+          <h2>5. Third-Party Services</h2>
+          <p>
+            Still Us is built on <strong>Google Firebase</strong>, which provides our database,
+            authentication, and cloud functions. Your data is stored on Firebase infrastructure
+            in accordance with Google's data processing terms. Please review
+            <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase's privacy policy</a>
+            for details.
+          </p>
+          <p>
+            We use <strong>Firebase Cloud Messaging (FCM)</strong> to deliver push notifications
+            via Apple APNs and Google FCM infrastructure.
+          </p>
+          <p>
+            We do not integrate advertising networks, social login SDKs, or third-party
+            analytics services.
+          </p>
+        </section>
+
+        <section>
+          <h2>6. Data Retention</h2>
+          <p>
+            We retain your data for as long as your account is active. You may request deletion
+            of your account and all associated data at any time by contacting us (see Section 9).
+            After deletion, data is removed from our live systems within 30 days and from backups
+            within 90 days.
+          </p>
+        </section>
+
+        <section>
+          <h2>7. Children's Privacy</h2>
+          <p>
+            Still Us is not directed at children under 13. We do not knowingly collect
+            personal information from children under 13. If you believe a child under 13
+            has provided us with personal information, please contact us immediately.
+          </p>
+        </section>
+
+        <section>
+          <h2>8. Your Rights</h2>
+          <p>Depending on your location, you may have the right to:</p>
+          <ul>
+            <li>Access the personal data we hold about you</li>
+            <li>Correct inaccurate data</li>
+            <li>Request deletion of your data</li>
+            <li>Object to or restrict processing of your data</li>
+            <li>Port your data to another service</li>
+          </ul>
+          <p>To exercise any of these rights, contact us at the address in Section 9.</p>
+        </section>
+
+        <section>
+          <h2>9. Contact Us</h2>
+          <p>
+            If you have questions about this Privacy Policy or your data, please contact us at:
+          </p>
+          <p>
+            <strong>Still Us</strong><br />
+            Email: <a href="mailto:privacy@stillus.app">privacy@stillus.app</a>
+          </p>
+        </section>
+
+        <section>
+          <h2>10. Changes to This Policy</h2>
+          <p>
+            We may update this Privacy Policy from time to time. We will notify you of
+            significant changes via in-app notification. Continued use of Still Us after
+            changes constitutes acceptance of the updated policy.
+          </p>
+        </section>
+
+      </div>
+    </div>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .prose-legal section {
+    margin-bottom: 2.5rem;
+  }
+
+  .prose-legal h2 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #1A1A2E;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #E5E7EB;
+    letter-spacing: -0.01em;
+  }
+
+  .prose-legal h3 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #1A1A2E;
+    margin-top: 1.25rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .prose-legal p {
+    font-size: 0.9375rem;
+    color: #6B7280;
+    line-height: 1.75;
+    margin-bottom: 0.9rem;
+  }
+
+  .prose-legal ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .prose-legal li {
+    font-size: 0.9375rem;
+    color: #6B7280;
+    line-height: 1.6;
+    padding-left: 1.25rem;
+    position: relative;
+  }
+
+  .prose-legal li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.6em;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #E8547A;
+    opacity: 0.5;
+  }
+
+  .prose-legal a {
+    color: #E8547A;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .prose-legal a:hover {
+    color: #C43060;
+  }
+
+  .prose-legal strong {
+    color: #1A1A2E;
+    font-weight: 600;
+  }
+</style>

@@ -1,0 +1,168 @@
+<!-- Starts transparent over hero, transitions to frosted white on scroll -->
+<header
+  id="navbar"
+  class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+>
+  <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+    <!-- Logo -->
+    <a href="/" class="flex items-center gap-2.5 group flex-shrink-0">
+      <div
+        class="w-8 h-8 rounded-xl bg-gradient-to-br from-brand to-brand-dark flex items-center justify-center shadow-brand"
+      >
+        <svg viewBox="0 0 24 24" fill="white" class="w-4 h-4">
+          <path
+            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+          ></path>
+        </svg>
+      </div>
+      <span
+        id="logo-text"
+        class="font-semibold text-lg tracking-tight text-white transition-colors duration-300"
+      >Still Us</span>
+    </a>
+
+    <!-- Desktop nav -->
+    <nav class="hidden md:flex items-center gap-8">
+      <a
+        id="nav-about"
+        href="/"
+        class="text-white/60 hover:text-white text-sm font-medium transition-colors duration-200"
+      >About</a>
+    </nav>
+
+    <!-- Desktop CTAs -->
+    <div class="hidden sm:flex items-center gap-2">
+      <a
+        id="nav-ios"
+        href="#download"
+        class="flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white text-sm font-semibold hover:bg-white/20 transition-all duration-200"
+      >
+        <i class="fab fa-apple text-sm"></i>
+        <span>App Store</span>
+      </a>
+      <a
+        id="nav-android"
+        href="#download"
+        class="flex items-center gap-2 px-4 py-2 rounded-full bg-brand text-white text-sm font-semibold hover:bg-brand-dark transition-all duration-200 shadow-brand"
+      >
+        <i class="fab fa-google-play text-xs"></i>
+        <span>Google Play</span>
+      </a>
+    </div>
+
+    <!-- Mobile menu button -->
+    <button
+      id="menu-btn"
+      class="sm:hidden p-2 rounded-lg text-white hover:bg-white/10 transition-colors"
+      aria-label="Toggle menu"
+    >
+      <svg
+        id="menu-icon"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        class="w-5 h-5"
+      >
+        <path d="M3 12h18M3 6h18M3 18h18"></path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile dropdown -->
+  <div
+    id="mobile-menu"
+    class="hidden sm:hidden bg-white/95 backdrop-blur-md border-t border-edge px-6 py-4 space-y-2"
+  >
+    <a
+      href="/"
+      class="block px-3 py-2.5 rounded-xl text-ink text-sm font-medium hover:bg-canvas transition-colors"
+    >About</a>
+    <div class="flex gap-2 pt-2 pb-1">
+      <a
+        href="#download"
+        class="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 rounded-full border border-edge text-ink text-sm font-semibold hover:border-ink/40 transition-colors"
+      >
+        <i class="fab fa-apple"></i>
+        App Store
+      </a>
+      <a
+        href="#download"
+        class="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-brand text-white text-sm font-semibold hover:bg-brand-dark transition-colors"
+      >
+        <i class="fab fa-google-play text-xs"></i>
+        Google Play
+      </a>
+    </div>
+  </div>
+</header>
+
+<script>
+  const navbar = document.getElementById('navbar')!;
+  const logoText = document.getElementById('logo-text')!;
+  const navAbout = document.getElementById('nav-about')!;
+  const navIos = document.getElementById('nav-ios')!;
+  const menuBtn = document.getElementById('menu-btn')!;
+  const mobileMenu = document.getElementById('mobile-menu')!;
+
+  function updateNavbar() {
+    const scrolled = window.scrollY > 60;
+
+    if (scrolled) {
+      navbar.classList.add(
+        'bg-white/95',
+        'backdrop-blur-md',
+        'border-b',
+        'border-edge',
+        'shadow-sm'
+      );
+      logoText.classList.replace('text-white', 'text-ink');
+      navAbout.classList.replace('text-white/60', 'text-ink/50');
+      navAbout.classList.replace('hover:text-white', 'hover:text-ink');
+      navIos.classList.remove(
+        'bg-white/10',
+        'border-white/20',
+        'text-white',
+        'hover:bg-white/20'
+      );
+      navIos.classList.add(
+        'border-edge',
+        'text-ink',
+        'hover:border-ink/40',
+        'hover:bg-canvas'
+      );
+    } else {
+      navbar.classList.remove(
+        'bg-white/95',
+        'backdrop-blur-md',
+        'border-b',
+        'border-edge',
+        'shadow-sm'
+      );
+      logoText.classList.replace('text-ink', 'text-white');
+      navAbout.classList.replace('text-ink/50', 'text-white/60');
+      navAbout.classList.replace('hover:text-ink', 'hover:text-white');
+      navIos.classList.add(
+        'bg-white/10',
+        'border-white/20',
+        'text-white',
+        'hover:bg-white/20'
+      );
+      navIos.classList.remove(
+        'border-edge',
+        'text-ink',
+        'hover:border-ink/40',
+        'hover:bg-canvas'
+      );
+    }
+  }
+
+  window.addEventListener('scroll', updateNavbar, { passive: true });
+  updateNavbar();
+
+  menuBtn.addEventListener('click', () => {
+    const open = !mobileMenu.classList.contains('hidden');
+    mobileMenu.classList.toggle('hidden', open);
+  });
+</script>

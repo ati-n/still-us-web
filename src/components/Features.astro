@@ -1,0 +1,206 @@
+<!-- Features grid section — light background -->
+<section id="features" class="bg-canvas py-24 px-6">
+  <div class="max-w-6xl mx-auto">
+    <!-- Section header -->
+    <div class="text-center mb-16">
+      <p
+        class="text-xs font-semibold tracking-label uppercase text-brand mb-3"
+      >Features</p>
+      <h2
+        class="font-display text-3xl sm:text-4xl lg:text-[2.8rem] text-ink leading-[1.2] tracking-[-0.02em] mb-4"
+      >
+        Everything you need.<br />
+        <span class="text-ink/40">Nothing you don't.</span>
+      </h2>
+      <p class="text-ink/55 text-lg max-w-xl mx-auto leading-relaxed">
+        Still Us strips away the noise and gives you the tools that actually
+        bring couples closer together.
+      </p>
+    </div>
+
+    <!-- Feature cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <!-- Shared Tasks -->
+      <div class="feature-card group">
+        <div class="icon-wrap bg-brand-faint">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#E8547A"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="w-6 h-6"
+          >
+            <polyline points="9 11 12 14 22 4"></polyline>
+            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+          </svg>
+        </div>
+        <h3 class="feature-title">Shared Tasks</h3>
+        <p class="feature-body">
+          Divide, conquer, and celebrate together. Assign tasks, set priorities,
+          and check them off as a team. No more "I thought you were handling it."
+        </p>
+        <div class="feature-tags">
+          <span class="tag tag-rose">Priority levels</span>
+          <span class="tag tag-rose">Due dates</span>
+        </div>
+      </div>
+
+      <!-- Couples Calendar -->
+      <div class="feature-card group">
+        <div class="icon-wrap bg-accent-faint">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#8B7FD4"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="w-6 h-6"
+          >
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+        </div>
+        <h3 class="feature-title">Couples Calendar</h3>
+        <p class="feature-body">
+          One calendar, two lives. Plan date nights, track anniversaries, and
+          set reminders so you never miss the moments that matter most.
+        </p>
+        <div class="feature-tags">
+          <span class="tag tag-lavender">Recurring events</span>
+          <span class="tag tag-lavender">Reminders</span>
+        </div>
+      </div>
+
+      <!-- Mood Sharing -->
+      <div class="feature-card group">
+        <div class="icon-wrap bg-brand-faint">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#E8547A"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="w-6 h-6"
+          >
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+            <line x1="9" y1="9" x2="9.01" y2="9"></line>
+            <line x1="15" y1="9" x2="15.01" y2="9"></line>
+          </svg>
+        </div>
+        <h3 class="feature-title">Mood Sharing</h3>
+        <p class="feature-body">
+          No guessing games. Share how you're feeling with a single tap. See
+          your partner's mood in real time — a tiny check-in that says more than
+          you think.
+        </p>
+        <div class="feature-tags">
+          <span class="tag tag-rose">12 moods</span>
+          <span class="tag tag-rose">Live updates</span>
+        </div>
+      </div>
+
+      <!-- Special Messages -->
+      <div class="feature-card group">
+        <div class="icon-wrap bg-accent-faint">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#8B7FD4"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="w-6 h-6"
+          >
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+        </div>
+        <h3 class="feature-title">Special Messages</h3>
+        <p class="feature-body">
+          Words deserve the right moment. Send time-delayed surprises, lock
+          messages until a special date, or protect them with a password — only
+          your partner can unlock.
+        </p>
+        <div class="feature-tags">
+          <span class="tag tag-lavender">Time-lock</span>
+          <span class="tag tag-lavender">Password lock</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .feature-card {
+    background: white;
+    border: 1px solid #E5E7EB;
+    border-radius: 20px;
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: box-shadow 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
+  }
+
+  .feature-card:hover {
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.10);
+    transform: translateY(-3px);
+    border-color: #D1D5DB;
+  }
+
+  .icon-wrap {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-bottom: 4px;
+  }
+
+  .feature-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1A1A2E;
+    line-height: 1.2;
+  }
+
+  .feature-body {
+    font-size: 0.875rem;
+    color: #6B7280;
+    line-height: 1.65;
+    flex: 1;
+  }
+
+  .feature-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 4px;
+  }
+
+  .tag {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 999px;
+  }
+
+  .tag-rose {
+    background: #FDE8F0;
+    color: #C43060;
+  }
+
+  .tag-lavender {
+    background: #F5F0FF;
+    color: #6355B0;
+  }
+</style>
