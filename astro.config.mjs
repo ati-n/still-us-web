@@ -4,5 +4,5 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
     output: "static",
     integrations: [tailwind()],
-    site: "[https://stillus.app](https://stillus.app)",
+    site: "https://stillus.app",
 });
